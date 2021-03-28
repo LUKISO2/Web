@@ -7,8 +7,8 @@ window.onload=function() {
     document.body.classList.toggle("light-theme");
     if(this.textContent == darkStr) this.textContent = lightStr;
     else this.textContent = darkStr;
-    if(this.textContent == darkStr) document.cookie = "lighttheme=false";
-    else document.cookie = "lighttheme=true";
+    if(this.textContent == darkStr) document.cookie = "lighttheme=true";
+    else document.cookie = "lighttheme=false";
   });
 }
 
@@ -26,4 +26,12 @@ function getCookie(cname) {
     }
   }
   return "";
+}
+
+if (getCookie("lighttheme") == "true") {
+  document.body.classList.toggle("light-theme");
+  if(this.textContent == darkStr) this.textContent = lightStr;
+  else this.textContent = darkStr;
+  if(this.textContent == darkStr) document.cookie = "lighttheme=true";
+  else document.cookie = "lighttheme=false";
 }
