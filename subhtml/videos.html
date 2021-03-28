@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles/universal.css">
     <link rel="stylesheet" href="../styles/videos.css">
+    <link rel="icon" href="../images/L4.jpg">
   </head>
   <body>
     <a href="../index.html" class="home">Home</a>
@@ -26,22 +27,7 @@
       <div class="panel">
         <p>Lorem ipsum...</p>
       </div>
-      <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-      </script>
+      <script src="../scripts/chosescript.js"></script>
     </div>
   </body>
 </html>
