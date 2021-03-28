@@ -7,8 +7,8 @@ window.onload=function() {
     document.body.classList.toggle("light-theme");
     if(this.textContent == darkStr) this.textContent = lightStr;
     else this.textContent = darkStr;
-    if(this.textContent == darkStr) document.cookie = "lighttheme=true";
-    else document.cookie = "lighttheme=false";
+    if(this.textContent == darkStr) document.cookie = "lighttheme=false";
+    else document.cookie = "lighttheme=true";
   });
 }
 
@@ -30,8 +30,5 @@ function getCookie(cname) {
 
 if (getCookie("lighttheme") == "true") {
   document.body.classList.toggle("light-theme");
-  if(this.textContent == darkStr) this.textContent = lightStr;
-  else this.textContent = darkStr;
-  if(this.textContent == darkStr) document.cookie = "lighttheme=true";
-  else document.cookie = "lighttheme=false";
+  this.textContent = 'Tmavý režim';
 }
