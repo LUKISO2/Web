@@ -7,8 +7,8 @@ window.onload=function() {
     document.body.classList.toggle("light-theme");
     if(this.textContent == darkStr) this.textContent = lightStr;
     else this.textContent = darkStr;
-    if(this.textContent == darkStr) document.cookie = "lighttheme=false";
-    else document.cookie = "lighttheme=true";
+    if(this.textContent == darkStr) document.cookie = "lighttheme=true";
+    else document.cookie = "lighttheme=false";
   });
 }
 
@@ -27,3 +27,25 @@ function getCookie(cname) {
   }
   return "";
 }
+
+if (getCookie("lighttheme") == "true") {
+  const btn = document.querySelector(".btn-toggle");
+  var lightStr = 'Světlý režim'
+  var darkStr = 'Tmavý režim'
+
+  btn.addEventListener("click", function () {
+    document.body.classList.toggle("light-theme");
+    if(this.textContent == darkStr) this.textContent = lightStr;
+    else this.textContent = darkStr;
+    if(this.textContent == darkStr) document.cookie = "lighttheme=true";
+    else document.cookie = "lighttheme=false";
+  });
+}
+
+//if (getCookie("lighttheme") == "true") {
+//  const btn = document.querySelector(".btn-toggle");
+//  var darkStr = 'Tmavý režim'
+//
+//  document.body.classList.toggle("light-theme");
+//  btn.textContent = darkStr;
+//}

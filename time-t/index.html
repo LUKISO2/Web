@@ -10,20 +10,39 @@
         <link rel="icon" href="../images/L4.jpg">
     </head>
     <body>
-        <script src="../scripts/time-t.js"></script>
         <div class="tab">
-            <button class="tablinks" onload="onLoad()" onclick="openCity(event, 'tab1')" id="defaultOpen">Time-T</button>
+            <button class="tablinks" onclick="openCity(event, 'tab1')" id="defaultOpen">Time-T</button>
             <button class="tablinks" onclick="openCity(event, 'tab2')">Other</button>
         </div>
         
         <div id="tab1" class="tabcontent">
-            <h3>Time-T-1</h3>
-            <p>First episode of my story Time-T!</p>
+            <h2>Time-T chapters:</h2>
+            <div class="Vtab">
+                <button class="Vtablinks active" onclick="VopenCity(event, 'Vtab1')">Time-T-1</button>
+                <button class="Vtablinks" onclick="VopenCity(event, 'Vtab2')">Time-T-2</button>
+                <button class="Vtablinks" onclick="VopenCity(event, 'Vtab3')">Time-T-3</button>
+            </div>
+              
+            <div id="Vtab1" class="Vtabcontent">
+                <h3>Time-T-1</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+            
+            <div id="Vtab2" class="Vtabcontent" style="display: none;">
+                <h3>Time-T-2</h3>
+                <p>Paris is the capital of France.</p>
+            </div>
+            
+            <div id="Vtab3" class="Vtabcontent" style="display: none;">
+                <h3>Time-T-3</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
         </div>
         
         <div id="tab2" class="tabcontent">
             <h3>Not finished yet!</h3>
             <p>Get out of here, idk how you got here, but...</p>
         </div>
+        <script src="../scripts/time-t.js"></script>
     </body>
 </html>

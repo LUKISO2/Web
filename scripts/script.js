@@ -18,16 +18,3 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-
-
-window.onload=function(){
-  const btn = document.querySelector(".btn-toggle");
-  var darkStr = 'Světlý režim'
-  var lightStr = 'Tmavý režim'
-
-  btn.addEventListener("click", function () {
-    document.body.classList.toggle("light-theme");
-    if(this.textContent == lightStr) this.textContent = darkStr;
-    else this.textContent = lightStr;
-  });
-}
