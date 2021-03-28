@@ -28,9 +28,7 @@ function getCookie(cname) {
   return "";
 }
 
-function onLoad() {
-  if (getCookie("lighttheme") == "true") {
-    document.body.classList.toggle("light-theme");
-    document.getElementsByClassName("btn-toggle").textContent = 'Tmavý režim';
-  }
+if (getCookie("lighttheme") == "true") {
+  document.body.classList.toggle("light-theme");
+  document.getElementsByClassName("btn-toggle").textContent = 'Tmavý režim';
 }
