@@ -30,5 +30,5 @@ function getCookie(cname) {
 
 if (getCookie("lighttheme") == "true") {
   document.body.classList.toggle("light-theme");
-  document.querySelector(".btn-toggle").textContent = 'Tmavý režim';
+  document.getElementsByClassName("btn-toggle").textContent = 'Tmavý režim';
 }
