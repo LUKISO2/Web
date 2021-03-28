@@ -29,6 +29,9 @@ function getCookie(cname) {
 }
 
 if (getCookie("lighttheme") == "true") {
+  const btn = document.querySelector(".btn-toggle");
+  var darkStr = 'Tmavý režim'
+
   document.body.classList.toggle("light-theme");
-  document.getElementsByClassName("btn-toggle").textContent = 'Tmavý režim';
+  btn.textContent = darkStr;
 }
