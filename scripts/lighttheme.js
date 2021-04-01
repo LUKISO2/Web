@@ -42,10 +42,9 @@ if (getCookie("lighttheme") == "true") {
   });
 }
 
-//if (getCookie("lighttheme") == "true") {
-//  const btn = document.querySelector(".btn-toggle");
-//  var darkStr = 'Tmavý režim'
-//
-//  document.body.classList.toggle("light-theme");
-//  btn.textContent = darkStr;
-//}
+if (getCookie("lighttheme") == "true") {
+  var darkStr = 'Tmavý režim'
+
+  document.body.classList.toggle("light-theme");
+  document.getElementsByClassName("btn-toggle").textContent = darkStr;
+}
