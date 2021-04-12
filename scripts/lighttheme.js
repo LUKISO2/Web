@@ -10,6 +10,12 @@ window.onload=function() {
     if(this.textContent == darkStr) document.cookie = "lighttheme=true";
     else document.cookie = "lighttheme=false";
   });
+  if (getCookie("lighttheme") == "true") {
+    var darkStr = 'Tmavý režim'
+  
+    document.body.classList.toggle("light-theme");
+    document.getElementsByClassName("btn-toggle").textContent = darkStr;
+  }
 }
 
 function getCookie(cname) {
@@ -28,23 +34,23 @@ function getCookie(cname) {
   return "";
 }
 
-if (getCookie("lighttheme") == "true") {
-  const btn = document.querySelector(".btn-toggle");
-  var lightStr = 'Světlý režim'
-  var darkStr = 'Tmavý režim'
+// if (getCookie("lighttheme") == "true") {
+//   const btn = document.querySelector(".btn-toggle");
+//   var lightStr = 'Světlý režim'
+//   var darkStr = 'Tmavý režim'
 
-  btn.addEventListener("click", function () {
-    document.body.classList.toggle("light-theme");
-    if(this.textContent == darkStr) this.textContent = lightStr;
-    else this.textContent = darkStr;
-    if(this.textContent == darkStr) document.cookie = "lighttheme=true";
-    else document.cookie = "lighttheme=false";
-  });
-}
+//   btn.addEventListener("click", function () {
+//     document.body.classList.toggle("light-theme");
+//     if(this.textContent == darkStr) this.textContent = lightStr;
+//     else this.textContent = darkStr;
+//     if(this.textContent == darkStr) document.cookie = "lighttheme=true";
+//     else document.cookie = "lighttheme=false";
+//   });
+// }
 
-if (getCookie("lighttheme") == "true") {
-  var darkStr = 'Tmavý režim'
+// if (getCookie("lighttheme") == "true") {
+//   var darkStr = 'Tmavý režim'
 
-  document.body.classList.toggle("light-theme");
-  document.getElementsByClassName("btn-toggle").textContent = darkStr;
-}
+//   document.body.classList.toggle("light-theme");
+//   document.getElementsByClassName("btn-toggle").textContent = darkStr;
+// }
