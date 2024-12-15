@@ -1,10 +1,10 @@
-.content {
+/* .content {
   position: relative;
   overflow: visible;
   width: 300px;
   height: 300px;
   border: none;
-}
+} */
 
 .main {
   text-align: center;
@@ -45,8 +45,8 @@
 
 .center-cropped {
   width: 100%;
-  max-height: 30%;
   height: 300px;
+  max-height: 30%;
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;

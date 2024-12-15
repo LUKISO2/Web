@@ -1,4 +1,4 @@
-var button, buttons, b, memes, x
+var button, buttons, b, x, y, templeate1, templeate2, memesCodes
 
 hideClass = 'hideMeme';
 buttons = document.querySelectorAll('iframe.memeVideo + button.close');
@@ -10,18 +10,26 @@ for (b = 0; b < buttons.length; b++) {
   });
 }
 
-memes = ["https://streamable.com/e/y2sqg5?autoplay=1&nocontrols=1", "https://streamable.com/e/5qwu13?autoplay=1&nocontrols=1", "https://streamable.com/e/mptpx5?autoplay=1&nocontrols=1"]
-x = getRndInteger(0, 3)
-function randomMeme() {
-  document.getElementById("memeVideo").src = memes[x];
+templeate1 = "https://streamable.com/e/"
+templeate2 = "?autoplay=1&nocontrols=1"
+memesCodes = ["2wv56i", "2ru1wv", "939c73", "gfnf8p"]
+y = memesCodes.length;
+x = getRndInteger(0, y)
+
+function getLink() {
+  return templeate1.concat(memesCodes[x], templeate2);
 }
 
-document.getElementById("next").addEventListener("click", function() {
-  x = x + 1
-  if(x == 3) x = 0
-  document.getElementById("memeVideo").src = memes[x];
-})
+function randomMeme() {
+  document.getElementById("memeVideo").src = getLink();
+}
 
 function getRndInteger(minimum, maximum) {
   return Math.floor(Math.random() * (maximum - minimum)) + minimum;
 }
+
+document.getElementById("next").addEventListener("click", function() {
+  x += 1;
+  if(x == y) x = 0;
+  document.getElementById("memeVideo").src = getLink();
+})

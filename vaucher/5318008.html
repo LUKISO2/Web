@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slevømat Voucher 5318008</title>
+  <link rel="stylesheet" href="../styles/voucher.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Voucher 5318008</h1>
+    
+    <p><strong>Typ:</strong> Jungle Holešovice - Bouldering pro 2</p>
+    
+    <p><strong>Adresa:</strong><br>Jungle Holešovice (Boulder Bar)<br>
+       U Výstaviště 230/11<br>
+       Praha 7 - Holešovice
+    </p>
+    
+    <p><strong>Kdy:</strong> Někdy kdy se domluvíme</p>
+
+    <p><strong>Poznámky:</strong> Občerstvení zahrnuto v ceně</p>
+    
+    <!-- Date Picker -->
+    <label for="reservation-date">Změnit datum rezervace:</label>
+    <input type="date" id="reservation-date" />
+    
+    <!-- Button to trigger the funny error message -->
+    <button id="change-date-btn" style="margin-top: 16px;">Change Reservation Date</button>
+    
+    <!-- Error message placeholder; initially hidden -->
+    <p id="error-message" style="color: red; display: none; margin-top: 16px;"></p>
+  </div>
+
+  <!-- Inline script to handle button click -->
+  <script>
+    const changeDateBtn = document.getElementById('change-date-btn');
+    const errorMessage = document.getElementById('error-message');
+
+    changeDateBtn.addEventListener('click', () => {
+      // Show a funny error message in red
+      errorMessage.textContent = "Oops! The reservation system is currently on a coffee break. Please try again later!";
+      errorMessage.style.display = "block";
+    });
+  </script>
+</body>
+</html>

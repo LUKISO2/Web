@@ -1,0 +1,90 @@
+/* Basic dark theme styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 100px auto 0;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+h1, h2, p, label {
+  margin: 0 0 16px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Text input styling */
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* Date input styling */
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #333;
+  color: #f0f0f0;
+  font-size: 16px;
+  /* Some browsers require setting a min-height for a consistent look */
+  min-height: 36px;
+  cursor: pointer;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* For WebKit browsers, invert the calendar icon so it’s visible on a dark background */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Basic button styling */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #555;
+  color: #f0f0f0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #666;
+}

@@ -2,7 +2,8 @@
   position: fixed;
   width: 90%;
   max-width: 480px;
-  max-height: 270px;
+  max-height: 370px;
+  aspect-ratio: 16:9;
   bottom: 10px;
   right: 10px;
   overflow: hidden;
